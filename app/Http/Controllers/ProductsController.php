@@ -88,4 +88,11 @@ class ProductsController extends Controller
 
         return [];
     }
+	
+    public function favorites(Request $request)
+    {
+        $products = $request->user()->favoriteProducts()->paginate(16);
+var_dump($products->toArray());exit;
+        return view('products.favorites', ['products' => $products]);
+    }
 }
