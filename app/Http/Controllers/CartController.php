@@ -38,7 +38,7 @@ class CartController extends Controller
     {
         $cartItems = $request->user()->cartItems()->with(['productSku.product'])->get();
 		$addresses = $request->user()->addresses()->orderBy('last_used_at', 'desc')->get();
-//var_dump($addresses->toArray());exit;
+
         return view('cart.index', ['cartItems' => $cartItems, 'addresses' => $addresses]);
     }
 	
