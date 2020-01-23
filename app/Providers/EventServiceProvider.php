@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Event;
 use App\Events\OrderPaid;
 use App\Listeners\UpdateProductSoldCount;
 use App\Listeners\SendOrderPaidMail;
+use App\Listeners\UpdateCrowdfundingProductProgress;
 use App\Events\OrderReviewed;
 use App\Listeners\UpdateProductRating;
 

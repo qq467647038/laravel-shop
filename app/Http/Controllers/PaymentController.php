@@ -41,7 +41,7 @@ class PaymentController extends Controller
 
     // 服务器端回调
     public function alipayNotify()
-    {
+    {file_put_contents('alipay.txt', $_REQUEST);
         // 校验输入参数
         $data  = app('alipay')->verify();
         // 如果订单状态不是成功或者结束，则不走后续的逻辑
